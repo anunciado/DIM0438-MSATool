@@ -9,31 +9,28 @@ import org.biojava.nbio.core.sequence.compound.AminoAcidCompound;
 import org.biojava.nbio.core.sequence.io.FastaReaderHelper; 
 import org.biojava.nbio.core.util.ConcurrencyTools;
 
-public class CookbookMSA {
-
-   public static void main(String[] args) {  
-       String[] ids = new String[] {"Q21691", "A8WS47", "O48771"};  
-       try {  
-           multipleSequenceAlignment(ids);  
-       } catch (Exception e){  
-           e.printStackTrace();  
-       }  
+public class MSA {
+	
+   private ArrayList<String> ids;
+	
+   MSA(ArrayList<String> ids) {
+	   this.ids = ids;
    }
 
-   private static void multipleSequenceAlignment(String[] ids) throws Exception {  
+   public String multipleSequenceAlignment() throws Exception {  
        List<ProteinSequence> lst = new ArrayList<ProteinSequence>();  
        for (String id : ids) {  
            lst.add(getSequenceForId(id));  
        }  
        Profile<ProteinSequence, AminoAcidCompound> profile = Alignments.getMultipleSequenceAlignment(lst);  
-       System.out.printf("Clustalw:%n%s%n", profile);  
        ConcurrencyTools.shutdown();  
+       return profile.toString();
    }
 
-   private static ProteinSequence getSequenceForId(String uniProtId) throws Exception {  
+   public ProteinSequence getSequenceForId(String uniProtId) throws Exception {  
        URL uniprotFasta = new URL(String.format("http://www.uniprot.org/uniprot/%s.fasta", uniProtId));  
        ProteinSequence seq = FastaReaderHelper.readFastaProteinSequence(uniprotFasta.openStream()).get(uniProtId);  
-       System.out.printf("id : %s %s%n%s%n", uniProtId, seq, seq.getOriginalHeader());  
+       //System.out.printf("id : %s %s%n%s%n", uniProtId, seq, seq.getOriginalHeader());  
        return seq;  
    }
 

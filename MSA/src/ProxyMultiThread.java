@@ -8,7 +8,7 @@ public class ProxyMultiThread{
 	
 	static final int portServer1 = 9010;
 	static final int portServer2 = 9020;
-	static final int portClient = 9000;
+	static final int portClient = 9001;
     static final String ipServer1 = "127.0.0.1";
     static final String ipServer2 = "127.0.0.1";
     

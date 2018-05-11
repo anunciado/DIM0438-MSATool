@@ -10,7 +10,7 @@ import javax.net.ssl.SSLSocketFactory;
 
 public class Client {
      
-    static final int portProxy = 9000;
+    static final int portProxy = 9001;
     static final String ipProxy = "127.0.0.1";
     
     public static void main(String[] args) {
@@ -30,7 +30,7 @@ public class Client {
                 out.println(inputLine);
                 // Receive and print a message from the proxy
                 System.out.println("Message received from the proxy:");
-                System.out.println(bufferedReader.readLine());
+                System.out.println(bufferedReader.readLine().replaceAll("\t","\n"));
                 System.out.println("Closed connection");
             }           
         } catch (IOException ex) {
