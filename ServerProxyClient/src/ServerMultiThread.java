@@ -7,25 +7,20 @@ import javax.net.ssl.SSLServerSocketFactory;
 public class ServerMultiThread {
      
     static final int portProxy = 9010;
+    static final int backlog = 10;
  
     public static void main(String[] args) {
-              
-        SSLServerSocketFactory sslServerSocketFactory = 
-                (SSLServerSocketFactory)SSLServerSocketFactory.getDefault();
-         
+    	// Read SSL key to connect via SSL to proxy
+        SSLServerSocketFactory sslServerSocketFactory = (SSLServerSocketFactory)SSLServerSocketFactory.getDefault();        
         try {
-            ServerSocket sslServerSocket = 
-                    sslServerSocketFactory.createServerSocket(portProxy);
-            System.out.println("SSL ServerSocket started");
-            System.out.println(sslServerSocket.toString());
+            ServerSocket sslSocketToProxy = sslServerSocketFactory.createServerSocket(portProxy, backlog);
+            System.out.println("SSL ServerSocket started" + "\nPort: " + portProxy);
             while (true) {
-            	System.out.println("Números de clientes no momento: " + Thread.activeCount());
-                new ThreadServer(sslServerSocket.accept());
-            }
-             
+            	System.out.println("Number of clients at this moment on the server: " + (Thread.activeCount() - 1));
+                new ThreadServer(sslSocketToProxy.accept());
+            }             
         } catch (IOException ex) {
-            Logger.getLogger(ServerMultiThread.class.getName())
-                    .log(Level.SEVERE, null, ex);
+            Logger.getLogger(ServerMultiThread.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
      
