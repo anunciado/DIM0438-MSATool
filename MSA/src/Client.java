@@ -8,6 +8,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.net.ssl.SSLSocketFactory;
 
+/**
+ * @class The Client class implements a client structure by sockets. 
+ *
+ * @author  Shirley Ohara (shirleyohara@ufrn.edu.br)
+ * @author  Luis Eduardo  (cruxiu@ufrn.edu.br)
+ * @version 14.05.2018
+ */
 public class Client {
      
     static final int portProxy = 9001;
