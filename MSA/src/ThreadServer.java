@@ -9,14 +9,25 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
-class ThreadServer extends Thread {
-    private Socket sslSocketToProxy;
+/**
+ * @class This class present a server implementation using sockets
+ *
+ * @author  Luis Eduardo  (cruxiu@ufrn.edu.br)
+ * @author  Shirley Ohara (shirleyohara@ufrn.edu.br)
+ * @version 08.05.2018
+ */
+public class ThreadServer extends Thread {
+    private Socket sslSocketToProxy; /** The proxy socket */
     
-    ThreadServer(Socket sslSocketToProxy) {
+    /** 
+     * The parametrized constructor
+     * @param sslSockectToProxy
+     */
+    public ThreadServer(Socket sslSocketToProxy) {
         this.sslSocketToProxy = sslSocketToProxy;
         this.start();
     }
+	
     @Override
     public void run() {
     	try {
