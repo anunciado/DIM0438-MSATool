@@ -5,15 +5,28 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.net.ssl.SSLSocketFactory;;
+import javax.net.ssl.SSLSocketFactory;
 
-class ThreadProxy extends Thread {
+/**
+ * @class This class present a Proxy implementation using sockets
+ *
+ * @author  Luis Eduardo  (cruxiu@ufrn.edu.br)
+ * @author  Shirley Ohara (shirleyohara@ufrn.edu.br)
+ * @version 08.05.2018
+ */
+public class ThreadProxy extends Thread {
     
-	private Socket sslSocketToClient;
-    private final String ipServer;
-    private final int portServer;
+    private Socket sslSocketToClient; 	/** < The socket client */
+    private final String ipServer;	/** < The server ip */
+    private final int portServer;	/** < The server connection port */
     
-    ThreadProxy(Socket sslSocketToClient, String ipServer, int portServer) {
+    /**
+     * The ThreadProxy parametrized constructor
+     * @param sslSocketToClient
+     * @param ipServer
+     * @param portServer
+     */
+    public ThreadProxy(Socket sslSocketToClient, String ipServer, int portServer) {
         this.ipServer = ipServer;
         this.portServer = portServer;
         this.sslSocketToClient = sslSocketToClient;
