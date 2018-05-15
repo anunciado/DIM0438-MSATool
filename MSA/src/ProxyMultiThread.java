@@ -4,13 +4,20 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.net.ssl.SSLServerSocketFactory;;
 
+/**
+ * @class   This class present a implementation of a Proxy using mutiple threads.
+ *
+ * @author  Luis Eduardo (cruxiu@ufrn.edu.br)
+ * @author  Shirley Ohara (shirleyohara@ufrn.edu.br)
+ * @version 10.05.2018
+ */
 public class ProxyMultiThread{
 	
-	static final int portServer1 = 9010;
-	static final int portServer2 = 9020;
-	static final int portClient = 9001;
-    static final String ipServer1 = "127.0.0.1";
-    static final String ipServer2 = "127.0.0.1";
+	static final int portServer1 = 9010; 		/** < Port to connect with server 1 */
+	static final int portServer2 = 9020;		/** < Port to connect with server 2 */
+	static final int portClient = 9001;		/** < Port client connects with proxy */
+        static final String ipServer1 = "127.0.0.1";    /** < The server 1 ip */
+    	static final String ipServer2 = "127.0.0.1";	/** < The server 2 ip */
     
 	public static void main(String[] args) {
 		// Read SSL key to connect via SSL to client and servers
