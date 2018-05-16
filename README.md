@@ -76,7 +76,7 @@ An example would be:
 ```
 $ 9000 9001 9002 127.0.0.1 127.0.0.1
 ```
-4. Click on the Client class and go to run configurations, in Arguments tab, modify the "Program arguments" to:
+5. Click on the Client class and go to run configurations, in Arguments tab, modify the "Program arguments" to:
 ```
 $ portOfProxy adressOfProxy
 ```
@@ -85,11 +85,11 @@ An example would be:
 $ 9002 127.0.0.1
 ```
 * Compile by terminal:
-2. Enter the src folder and compile all the .java files with the following command:
+1. Enter the src folder and compile all the .java files with the following command:
 ```
 $ java * .java -d <target_address_name>
 ```
-3. Enter the chosen destination directory and run the following command:
+2. Enter the chosen destination directory and run the following command:
 For ServerMultiThread:
 ```
 $ java -cp path to biojava-alignment.jar:path to biojava-core.jar:path to biojava-phylo.jar:path to forester.jar:/MSATool/lib/slf4j-api.jar:/MSATool/lib/slf4j-simple.jar:. ServerMultiThread portOfProxy adressOfProxy
@@ -114,7 +114,7 @@ An example would be:
 ```
 $ java Client 9002 127.0.0.1
 ```
-4. From this it only interacts with the system.
+3. From this it only interacts with the system.
 
 In the client, a window, like below, will appear:
 ![Example](/images/example.png)
