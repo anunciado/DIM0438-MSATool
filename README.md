@@ -137,10 +137,10 @@ ME--------------TSSSLPLSPISIEP--------EQPSHRDYD---ITTRRGV--GTTGN--PIELCTNHFNVSVR
 
 ## Authors
 ### Developers: 
-* **[Luís Eduardo Anunciado Silva](cruxiu@ufrn.edu.br)** 
-* **[Shirley Ohara Telemaco de Freitas](shirleyohara@ufrn.edu.br)** 
+* **Luís Eduardo Anunciado Silva ([cruxiu@ufrn.edu.br](mailto:cruxiu@ufrn.edu.br))** 
+* **Shirley Ohara Telemaco de Freitas ([shirleyohara@ufrn.edu.br](mailto:shirleyohara@ufrn.edu.br))** 
 ### Project Advisor: 
-* **[Augusto José Venâncio Neto](augusto@dimap.ufrn.br)** 
+* **Augusto José Venâncio Neto ([augusto@dimap.ufrn.br](mailto:augusto@dimap.ufrn.br))** 
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
