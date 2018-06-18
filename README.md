@@ -5,6 +5,7 @@ A multiple sequence alignment (MSA) to align three or more protein sequences usi
 ### Prerequisites
 
 You will need to install the modules below to run the program: 
+* [java 8.0 or greater](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 * [biojava-alignment.jar](https://repo1.maven.org/maven2/org/biojava/biojava-alignment/4.2.0/biojava-alignment-4.2.0.jar)
 * [biojava-core.jar](https://repo1.maven.org/maven2/org/biojava/biojava-core/4.2.0/biojava-core-4.2.0.jar)
 * [biojava-phylo.jar](https://repo1.maven.org/maven2/org/biojava/biojava-phylo/4.2.0/biojava-phylo-4.2.0.jar)
