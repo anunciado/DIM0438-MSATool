@@ -143,7 +143,7 @@ ME--------------TSSSLPLSPISIEP--------EQPSHRDYD---ITTRRGV--GTTGN--PIELCTNHFNVSVR
 ### Project Advisor: 
 * **Augusto José Venâncio Neto ([augusto@dimap.ufrn.br](mailto:augusto@dimap.ufrn.br))** 
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/cruxiu/DIM0438-MSATool/contributors) who participated in this project.
 
 ## License
 
